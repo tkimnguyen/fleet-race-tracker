@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fleet Race Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Fleet Race Tracker</h1>
+
+<h2>Race Selection</h2>
+<select id="raceSelect"></select>
+<div id="raceStatus"></div>
+
+<h2>Admin Controls</h2>
+<button onclick="sendPoll()">Send Poll</button>
+<button onclick="forceClosePoll()">Force Close Poll</button>
+
+<h3>Override Response</h3>
+<input id="overridePhone" placeholder="Phone">
+<select id="overrideStatus">
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+<input id="overrideComment" placeholder="Comment">
+<button onclick="overrideResponse()">Override</button>
+
+<h2>Responses</h2>
+<table>
+<thead>
+<tr>
+  <th>Boat</th>
+  <th>Skipper</th>
+  <th>Status</th>
+  <th>Comment</th>
+  <th>Time</th>
+</tr>
+</thead>
+<tbody id="responses"></tbody>
+</table>
+
+<h2>Audit Log</h2>
+<pre id="audit"></pre>
+
+<script src="ics.js"></script>
+<script src="export.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
