@@ -3,8 +3,5 @@ function exportCSV(data) {
 
   return [header, ...data.map(r =>
     [r.boat, r.skipper, r.status, r.comment, r.timestamp]
-  )]
-    .map(r => r.join(","))
-    .join("\n");
+  )].map(r => r.join(",")).join("\n");
 }
-``

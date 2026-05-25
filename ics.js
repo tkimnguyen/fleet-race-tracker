@@ -1,9 +1,10 @@
 function parseICS(text) {
   return text.split("BEGIN:VEVENT").slice(1).map(e => {
-    const summary = e.match(/SUMMARY:(.*)/)?.[1];
+    const summary = e.match(/SUMMARY:(.*)/)?.[1] || "Race";
     const dt = e.match(/DTSTART(?:;TZID=.*?)?:(.*)/)?.[1];
 
     let date;
+
     if (dt.endsWith("Z")) {
       date = new Date(dt);
     } else {
@@ -16,6 +17,6 @@ function parseICS(text) {
       );
     }
 
-    return {summary, date};
+    return { summary, date };
   });
 }

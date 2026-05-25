@@ -8,9 +8,19 @@
 
 <body>
 
+<!-- LOGIN -->
+<div id="loginBox">
+  <h2>Admin Login</h2>
+  <input id="adminToken" type="password" placeholder="Enter admin token">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" style="display:none;">
+
 <h1>Fleet Race Tracker</h1>
 
-<h2>Race Selection</h2>
+<h2>Select Race</h2>
 <select id="raceSelect"></select>
 <div id="raceStatus"></div>
 
@@ -44,9 +54,6 @@
 <h2>Audit Log</h2>
 <pre id="audit"></pre>
 
-<script src="ics.js"></script>
-<script src="export.js"></script>
-<script src="app.js"></script>
+</div>
 
-</body>
-</html>
+<script src="ics.js"></script>
