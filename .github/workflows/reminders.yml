@@ -1,0 +1,12 @@
+name: Send Reminders
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call backend
+        run: curl -X POST https://your-api/sendReminders
