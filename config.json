@@ -1,0 +1,6 @@
+{
+  "fleet": "Laser Fleet",
+  "calendarUrl": "https://calendar.google.com/calendar/ical/yourcalendar/public/basic.ics",
+  "backendUrl": "https://your-api",
+  "pollCloseMinutes": 60
+}
